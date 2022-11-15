@@ -10,7 +10,10 @@ public class Main {
 		tree.put(5, 5);
 		tree.put(3, 3);
 		tree.put(7, 7);
-	
+			
 		tree.preOrder();
+		
+		System.out.println(tree.getFirstKey(7));
+
 	}
 }

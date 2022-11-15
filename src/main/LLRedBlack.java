@@ -95,6 +95,22 @@ package main;
 	    }
 	    
 	    
+	    
+	    public Key getFirstKey(Value val) throws IllegalArgumentException
+	    {
+	    	if(val == null) throw new IllegalArgumentException(); 
+	    	return getFirstKey(_root, val);
+	    }
+	    
+	    private Key getFirstKey(Node node, Value val)
+	    {
+	    	if(node == null) return null;
+	    	if(node._val.equals(val)) return node._key;
+	    	if(getFirstKey(node._left, val) != null) return getFirstKey(node._left, val); 
+	    	return getFirstKey(node._right, val);
+	    }
+	    
+	    
 	    public void inOrder()
 	    {
 	    	inOrder(_root);
@@ -139,6 +155,6 @@ package main;
 	    	return 1 + size(n._left) + size(n._right);
 	    }
 	    
-	   
+	    
 	    
 	}
