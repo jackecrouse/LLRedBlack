@@ -141,24 +141,16 @@ package main;
 	    	return 1 + size(n._left) + size(n._right);
 	    }
 	    
-	    
-	    public Integer blackHeight()
-	    {
-	    	return blackHeight(_root._right);
-	    }
-	    
-	    
-	    private Integer blackHeight(Node n)
+	    Integer blackHeight(Node n)
 	    {
 	    	if(n == null) return 0;
 	    	if(n._color == false) return 1 + blackHeight(n._right);
 	    	return blackHeight(n._right);
 	    }
 	    
-	    
 	    public Integer height(Node n)
 	    {
-	    	if(n == null) return -1;
+	    	if(n == null) return 0;
 	    	
 	    	int rightHeight = height(n._right);	
 	    	int leftHeight = height(n._left);

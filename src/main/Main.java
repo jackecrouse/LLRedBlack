@@ -18,24 +18,15 @@ public class Main {
 		tree.put(55, 55);
 		tree.put(54, 54);
 		
-		
 		Node node = tree._root;
-		
 		
 		System.out.println("---Preorder---");
 		tree.preOrder();
 		System.out.println("--------------");
-		
 		System.out.println("First Key 40: " + tree.getFirstKey(40));
-		
 		System.out.println("Size: " + tree.size(node));
-		
-		System.out.println("Black Height: " + tree.blackHeight());
-		
+		System.out.println("Black Height: " + tree.blackHeight(node));
 		System.out.println("Normal Height: " + tree.height(node));
-		
 		System.out.println("Depth: " + tree.depth(tree._root._right));
-		
-		
 	}
 }
